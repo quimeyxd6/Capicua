@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresa una palabra</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Outfit:wght@700&family=Rokkitt&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>¿Es capicua tu palabra?</h1>
+        <div class="container-h1">
+            <h1>¿Es capicua tu palabra?</h1>
+        </div>
         <div class="container-form">
-            <label for="palabra">Ingresa una palabra:</label>
+            <label for="palabra">Ingresa una palabra</label>
             <input type="text" id="palabra" name="palabra" class="input-palabra">
-            <button onclick="almacenarPalabra()">Almacenar</button>
+            <button onclick="almacenarPalabra()" class="btn">Almacenar</button>
         <div class="-container-resultado">
             <h3 id="palabraAlmacenada"></h3>
         </div>
