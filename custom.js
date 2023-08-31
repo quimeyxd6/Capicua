@@ -14,12 +14,19 @@ function almacenarPalabra() {
                     break;
                 }
             }
-
+        
             if (esCapicúa) {
-                document.getElementById("palabraAlmacenada").textContent = 'Es Capicúa';
+                document.getElementById("palabraAlmacenada").textContent = `${palabra} es Capicua`;
             } else {
-                document.getElementById("palabraAlmacenada").textContent = 'No es Capicúa';
+                document.getElementById("palabraAlmacenada").textContent = `${palabra} no es Capicua`;
             }
         }
     }
-    console.log(palabra);
+
+//Funcion que permite ejecutar el codigo presionando Enter
+document.addEventListener("keyup", function(event) {
+    var palabra = document.getElementById('palabra').value.toLowerCase().replace(/[^a-z]/g);
+    if (event.key === 'Enter' && palabra !== '') {
+       almacenarPalabra();
+    }
+});

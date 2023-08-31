@@ -1,29 +1,36 @@
-body {
-    height: 100%;
-    margin: 0;
-    background: rgb(30, 30, 30);
-    color: rgb(255, 255, 255);
+* {
     font-size: 20px;
     font-family: 'Epilogue', sans-serif;
     font-family: 'Outfit', sans-serif;
     font-family: 'Rokkitt', serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
 }
     
 .container {
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-flow: column;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+  margin: auto;
+  width: 500px;
+  height: 500px;
 }
 
 .container-h1 {
   background-color: black;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  padding: 1rem;
-  border-radius: 10%;
-  
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 35px;
 }
 
 .container-form {
@@ -31,26 +38,77 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  
+  border-radius: 10px;
+  padding: 10px;
 }
 
 label {
   padding: 3px;
-  margin: 7px;
-  
+  margin: 5px;
+  font-size: 25px;
 }
 
 .input-palabra {
   border: none;
+  width: 200px;
   padding: 3px;
-  margin: 7px;
-  background: rgb(177, 177, 177);
-  outline: none;
+  margin: 5px;
   border-radius: 4px;
-  
+}
+
+.input-palabra:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.input-palabra:focus {
+  outline: none;
+  background-color: rgb(210, 210, 210);
 }
 
 .btn {
   border: none;
   outline: none;
+  margin: 5px;
+  font-size: 20px;
+  width: 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
+
+.btn:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.btn:active {
+  background-color: rgb(190, 190, 190);
+}
+
+h3 {
+  padding: 10px;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 500px) {
+  * {
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #111;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+  }
+
+
+}
+
